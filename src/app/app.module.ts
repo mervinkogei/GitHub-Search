@@ -20,8 +20,8 @@ import { NgProgressHttpClientModule } from '@ngx-progressbar/http-client';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
-    NgProgressModule.forRoot(),
+    FormsModule,
+    // NgProgressModule.forRoot(),
     NgProgressHttpClientModule
   ],
   providers: [],
