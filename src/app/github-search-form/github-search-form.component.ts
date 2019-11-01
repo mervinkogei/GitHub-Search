@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Output,EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-github-search-form',
@@ -7,7 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GithubSearchFormComponent implements OnInit {
 
+  @Output () emitSearch = new EventEmitter<any>()
+
+username:string;
+repo:string;
+
   constructor() { }
+
+  gitSearch(){
+    this.emitSearch.emit(this.username);
+  }
 
   ngOnInit() {
   }
