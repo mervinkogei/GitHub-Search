@@ -6,12 +6,12 @@
         <fieldset >
           <div class="form-group">
             <label for="username">Username</label>
-            <input type="text" name="username" class="form-control" placeholder="Search Username" [(ngModel)]="username" #name="ngModel">
+            <input type="text" name="username" class="form-control" placeholder="Search Username" [(ngModel)]="username" >
           </div>
           <div class="form-group">
             <label for="repo">Repository</label>
             <input type="text" name="repo" class="form-control" placeholder="Search Repository" 
-            [(ngModel)]="repo" #repo="ngModel">
+            [(ngModel)]="repo" >
           </div>
           <button type="submit" (click)="gitSearch()" class="btn btn-primary">Submit</button>
         </fieldset>

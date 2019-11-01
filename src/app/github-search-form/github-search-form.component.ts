@@ -16,6 +16,9 @@ repo:string;
 
   gitSearch(){
     this.emitSearch.emit(this.username);
+    this.emitSearch.emit(this.repo);
+    console.log(this.username);
+    console.log(this.repo);
   }
 
   ngOnInit() {

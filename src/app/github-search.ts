@@ -1,6 +1,6 @@
 // import { GithubSearchComponent } from './github-search/github-search.component'
 
-export class GithubSearchComponent{
+export class GithubSearch{
     constructor(public username:string,public repo:string){
 
     }
