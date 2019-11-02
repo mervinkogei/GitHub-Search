@@ -11,6 +11,7 @@ import { NgProgressModule } from '@ngx-progressbar/core';
 import { NgProgressHttpClientModule } from '@ngx-progressbar/http-client';
 import { AboutComponent } from './about/about.component';
 import { HttpClientModule } from '@angular/common/http';
+import { DateCountPipe } from './date-count.pipe';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { HttpClientModule } from '@angular/common/http';
     NavbarComponent,
     GithubSearchComponent,
     GithubSearchFormComponent,
-    AboutComponent
+    AboutComponent,
+    DateCountPipe
   ],
   imports: [
     BrowserModule,
