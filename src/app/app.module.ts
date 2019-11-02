@@ -9,13 +9,15 @@ import { GithubSearchComponent } from './github-search/github-search.component';
 import { GithubSearchFormComponent } from './github-search-form/github-search-form.component';
 import { NgProgressModule } from '@ngx-progressbar/core';
 import { NgProgressHttpClientModule } from '@ngx-progressbar/http-client';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     GithubSearchComponent,
-    GithubSearchFormComponent
+    GithubSearchFormComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
