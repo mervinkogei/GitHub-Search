@@ -7,9 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GithubRepoComponent implements OnInit {
 
-  constructor() { }
+  gitRepo: RepoModel[];
 
-  ngOnInit() {
+  constructor(public reposerv: RepoServiceService) {
   }
 
+  getRepo(searchTerm: string) {
+    this.reposerv.getRepo(searchTerm).subscribe(data => {
+      this.gitRepo = data;
+      console.log(this.gitRepo);
+    });
+  }
+
+  ngOnInit() {
+    this.getRepo('mervinkogei');
+  }
 }

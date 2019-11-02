@@ -13,6 +13,7 @@ import { NgProgressHttpClientModule } from '@ngx-progressbar/http-client';
 import { HttpClientModule } from '@angular/common/http';
 import { DateCountPipe } from './date-count.pipe';
 import { GithubRepoComponent } from './github-repo/github-repo.component';
+import { GithubNotFoundComponent } from './github-not-found/github-not-found.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { GithubRepoComponent } from './github-repo/github-repo.component';
     GithubSearchFormComponent,
     // AboutComponent,
     DateCountPipe,
-    GithubRepoComponent
+    GithubRepoComponent,
+    GithubNotFoundComponent
   ],
   imports: [
     BrowserModule,
