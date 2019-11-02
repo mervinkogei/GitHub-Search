@@ -19,8 +19,9 @@ export class GithubSearchService {
     this.repository = new Repository('','','');
   }
 
-  gitSearch(gitUsername:string){
+  gitUsername(gitUsername:string){
     console.log(this.gitUsername)
+    
     interface ApiResponse {
          avatar_url:any,
          username: string,
@@ -35,18 +36,14 @@ export class GithubSearchService {
     let githubSearch = 'https://api.github.com/users/' + gitUsername + '?access_token=' + environment.apiurl;
     console.log(this.githubSearch);
   }
-  gitUsername(gitUsername: any) {
-    throw new Error("Method not implemented.");
-  }
 }
-
   let promise = new Promise((resolve, reject) => {
 
     this.http.get<ApiResponse>(githubSearch).toPromise().then(
-      (results) => {
+      (output) => {
 
-        console.log(results);
-        this.user = results;
+        console.log(output);
+        this.user = output;
         console.log(this.user);
 
         resolve();
@@ -59,5 +56,6 @@ export class GithubSearchService {
   });
   return promise;
 
+}
 
 }
