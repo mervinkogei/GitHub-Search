@@ -9,16 +9,16 @@ export class GithubSearchFormComponent implements OnInit {
 
   @Output () emitSearch = new EventEmitter<any>()
 
-username:string;
+gitUsername:string;
 repo:string;
 
   constructor() { }
 
   gitSearch(){
-    this.emitSearch.emit(this.username);
+    this.emitSearch.emit(this.gitUsername);
     this.emitSearch.emit(this.repo);
-    console.log(this.username);
-    console.log(this.repo);
+    // console.log(this.username);
+    // console.log(this.repo);
   }
 
   ngOnInit() {
