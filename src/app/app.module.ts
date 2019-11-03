@@ -9,7 +9,6 @@ import { GithubSearchComponent } from './github-search/github-search.component';
 import { GithubSearchFormComponent } from './github-search-form/github-search-form.component';
 import { NgProgressModule } from '@ngx-progressbar/core';
 import { NgProgressHttpClientModule } from '@ngx-progressbar/http-client';
-// import { AboutComponent } from './about/about.component';
 import { HttpClientModule } from '@angular/common/http';
 import { DateCountPipe } from './date-count.pipe';
 import { GithubRepoComponent } from './github-repo/github-repo.component';
@@ -21,7 +20,6 @@ import { GithubNotFoundComponent } from './github-not-found/github-not-found.com
     NavbarComponent,
     GithubSearchComponent,
     GithubSearchFormComponent,
-    // AboutComponent,
     DateCountPipe,
     GithubRepoComponent,
     GithubNotFoundComponent
@@ -31,9 +29,8 @@ import { GithubNotFoundComponent } from './github-not-found/github-not-found.com
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
-    // NgProgressModule.forRoot(),
+    NgProgressModule.forRoot(),
     NgProgressHttpClientModule,
-    // ApiResponse
   ],
   providers: [],
   bootstrap: [AppComponent]
