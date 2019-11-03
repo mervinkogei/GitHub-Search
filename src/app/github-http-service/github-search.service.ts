@@ -1,22 +1,41 @@
-import { Injectable } from '@angular/core';
-import { Repository } from '../repository';
-import { User } from '../user';
-import { HttpClient } from '@angular/common/http';
-import { environment } from 'src/environments/environment';
-import { promise } from 'protractor';
-import { resolve} from 'dns';
-import { from, Observable } from 'rxjs';
+import {Injectable} from '@angular/core';
+import {HttpClient} from '@angular/common/http';
+import {environment} from '../environments/environment';
+import { GithubSearchFormComponent } from './github-search-form/github-search-form.component';
+import {SearchUserComponent} from './search-user/search-user.component';
+import {Observable} from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
-export class GithubSearchService {
+export class GithubSearch {
+  user: GitUsername[] = [];
   _URL = 'https://api.github.com/users/';
-  token = '?access_token=3cbbddb991c02e7d5a2f0fd4224f9267a5153e5f';
-  constructor(public  http: HttpClient) {
+  token = '?access_token=a7bc763c5aa378e07575b0658605e6f4a8d85a13';
+
+  constructor(private http: HttpClient) {
   }
 
-  getRepo(searchTerm: string): Observable<any> {
-    return this.http.get(this._URL + searchTerm + '/repos?' + this.token);
+  searchMyUser(searchTerm: string) {
+    interface data {
+      login: string;
+      avatar_url: string;
+      following: string;
+      followers: string;
+      public_repos: string;
+    }
+
+    return new Promise((resolve, reject) => {
+      this.user = [];
+      this.http.get<data>(this._URL + searchTerm + this.token).toPromise().then(
+        (results) => {
+          this.user.push(results);
+          resolve();
+        },
+        (error) => {
+          reject();
+        }
+      );
+    });
   }
 }
