@@ -1,36 +1,33 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule} from '@angular/forms';
 
+import {FormsModule} from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { SearcFormComponent } from './searc-form/searc-form.component';
+import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import { GithubSearchComponent } from './github-search/github-search.component';
-import { GithubSearchFormComponent } from './github-search-form/github-search-form.component';
-import { NgProgressModule } from '@ngx-progressbar/core';
-import { NgProgressHttpClientModule } from '@ngx-progressbar/http-client';
-import { HttpClientModule } from '@angular/common/http';
+import { NotFoundComponent } from './not-found/not-found.component';
 import { DateCountPipe } from './date-count.pipe';
-import { GithubRepoComponent } from './github-repo/github-repo.component';
-import { GithubNotFoundComponent } from './github-not-found/github-not-found.component';
+
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
+    SearcFormComponent,
+    HomeComponent,
     NavbarComponent,
-    GithubSearchComponent,
-    GithubSearchFormComponent,
+    NotFoundComponent,
     DateCountPipe,
-    GithubRepoComponent,
-    GithubNotFoundComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule,
-    NgProgressModule.forRoot(),
-    NgProgressHttpClientModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

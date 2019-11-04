@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { GithubNotFoundComponent } from './github-not-found.component';
+import { SearcFormComponent } from './searc-form.component';
 
-describe('GithubNotFoundComponent', () => {
-  let component: GithubNotFoundComponent;
-  let fixture: ComponentFixture<GithubNotFoundComponent>;
+describe('SearcFormComponent', () => {
+  let component: SearcFormComponent;
+  let fixture: ComponentFixture<SearcFormComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ GithubNotFoundComponent ]
+      declarations: [ SearcFormComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(GithubNotFoundComponent);
+    fixture = TestBed.createComponent(SearcFormComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

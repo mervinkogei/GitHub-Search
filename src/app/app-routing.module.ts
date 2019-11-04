@@ -1,21 +1,17 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-
-import { GithubSearchComponent} from './github-search/github-search.component'
-import { GithubNotFoundComponent } from './github-not-found/github-not-found.component';
-import { GithubRepoComponent } from './github-repo/github-repo.component';
+import {HomeComponent} from './home/home.component';
+import {NotFoundComponent} from './not-found/not-found.component';
 
 
 const routes: Routes = [
-  {path: 'username', component: GithubSearchComponent},
-  {path: 'repo', component: GithubRepoComponent},
-  {path: '', redirectTo: '/username', pathMatch: 'full'},
-  {path: '**', component : GithubNotFoundComponent}
+  {"path":"home","component":HomeComponent},
+  {"pathMatch":"full","redirectTo":"home","path":""},
+  {"path":"**","component":NotFoundComponent},
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule {
-}
+export class AppRoutingModule { }
