@@ -12,10 +12,9 @@
   <div class="col-md-6">
         <div class="card">
           
-          <img src='{{user.avatar_url}}' alt="avatar" class=" img-card-top b-0 m-o" height="0px" width="auto">
+          <img src='{{user.avatar_url}}' alt="avatar" class=" img-card-top b-0 m-o" height="300px" width="auto">
           <div class="card-body text-center">
           <h4 class="card-title">{{user.login}}</h4>
-          
             <p>Followers: {{user.followers}}
             Following: {{user.following}} Public Repos: {{user.public_repos}} <p>
           
@@ -45,6 +44,8 @@
       
       
       <p class="card-text">{{repo.description}}</p>
+      <p> Created {{repo.created_at|date}}</p>
+
       <a class="btn btn-info" href="{{repo.html_url}}" target="_blank">View project on github</a>
     </div>
   </div>

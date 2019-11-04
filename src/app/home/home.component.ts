@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import {GitHttpServiceService} from '../services/git-http-service.service';
 import {User} from '../user';
 import {Repository} from '../repository';
-import { from } from 'rxjs';
 
 
 @Component({
@@ -42,7 +41,7 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.searchUser("daisyarusey");
+    this.searchUser("mervinkogei");
     
   }
 

@@ -25,13 +25,13 @@ export class GitHttpServiceService {
     console.log(searchTerm)
     interface ApiResponse {
     avatar_url:string;
-  login:string;
+    login:string;
   company: string;
   location: string;
     name: string;
   followers: number;
   following: number;
-  created_at: Date;
+  created_at: Date; 
   public_repos: number;
   html_url: string;
     }

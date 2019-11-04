@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   // Token:'?access_token=',
-  apikey:'5c297c920067773e2483c9bc359de23c6d4da17'
+  apikey:'a79224318503ad3ca891fbdc2deec4e52f71179c'
 };
 
 /*
