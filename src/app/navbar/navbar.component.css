@@ -1,3 +1,5 @@
-/* nav{
-    position: fixed;
-} */
+nav{
+    color: white;
+    position: sticky;
+    position: relative;
+}

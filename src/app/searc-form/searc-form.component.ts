@@ -11,10 +11,12 @@ export class SearcFormComponent implements OnInit {
 @Output() emitSearch = new EventEmitter<any>()
 
   searchTerm:string;
+  searchRepo:string;
   constructor() { }
 
   search(){
     this.emitSearch.emit(this.searchTerm);
+    this.emitSearch.emit(this.searchRepo);
   }
 
   ngOnInit() {
