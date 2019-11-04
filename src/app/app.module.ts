@@ -10,6 +10,7 @@ import { HomeComponent } from './home/home.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { DateCountPipe } from './date-count.pipe';
+import { GitrepoComponent } from './gitrepo/gitrepo.component';
 
 
 
@@ -22,6 +23,7 @@ import { DateCountPipe } from './date-count.pipe';
     NavbarComponent,
     NotFoundComponent,
     DateCountPipe,
+    GitrepoComponent,
   ],
   imports: [
     BrowserModule,
